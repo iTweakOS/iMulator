@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="img/icon.jpg" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<title>iMulator</title>
+<head>
+<style>
+
+body {
+   background-image: url("img/wallpaper.png");
+  background-attachment: fixed;
+   background-position: 100% 100%;
+   background-repeat: no-repeat;
+   margin:0px;
+}
+
+
+</style>
+</head>
+<body>
+
+  <center><img style="width:100%;" src="img/notch.png"></center>
+
+<br>
+
+  <center><div style="font-family:Helvetica;font-size:50px;color:white;" id="clockbox"></div></center>
+
+<center><a href="home.html"><img style="width:60px;right:43%;position:fixed;bottom:30px;" src="img/touchid.png"></a></center>
+
+<center><p style="font-family:Helvetica;font-size:10px;color:#f2f2f2;position:fixed;bottom:6px;right:43%;">Use Touch ID</p></center>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function GetClock(){
+var d=new Date();
+var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+
+var clocktext=""+nhour+":"+nmin+ap+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+
+<script type="text/javascript">
+var iWebkit;if(!iWebkit){iWebkit=window.onload=function(){function fullscreen(){var a=document.getElementsByTagName("a");for(var i=0;i<a.length;i++){if(a[i].className.match("noeffect")){}else{a[i].onclick=function(){window.location=this.getAttribute("href");return false}}}}function hideURLbar(){window.scrollTo(0,0.9)}iWebkit.init=function(){fullscreen();hideURLbar()};iWebkit.init()}}
+</script>

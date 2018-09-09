@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<link rel="icon" href="img/icon.jpg" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+<title>iMulator</title>
+<head>
+<style>
+
+
+body {
+  background: #F7F7F7;
+  margin: 0;
+  padding: 0;
+}
+
+#video-container {
+  margin: 2em auto 0;
+  width: 500px;
+  padding: 2em;
+  background: white;
+  -webkit-box-shadow: 0 1px 10px #D9D9D9;
+  -moz-box-shadow: 0 1px 10px #D9D9D9;
+  -ms-box-shadow: 0 1px 10px #D9D9D9;
+  -o-box-shadow: 0 1px 10px #D9D9D9;
+  box-shadow: 0 1px 10px #D9D9D9;
+}
+
+</style>
+</head>
+<body>
+<br>
+<br>
+
+  <center><input type="file" accept="image/*"></center>
+
+<br>
+
+<center><a style="font-family:arial;font-size:15px;color:#444444;" href="home.html">Back</a></center>
+
+</body>
+</html>
+
+
+<script>
+  const fileInput = document.getElementById('file-input');
+
+  fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+</script>
+
+<script type="text/javascript">
+var iWebkit;if(!iWebkit){iWebkit=window.onload=function(){function fullscreen(){var a=document.getElementsByTagName("a");for(var i=0;i<a.length;i++){if(a[i].className.match("noeffect")){}else{a[i].onclick=function(){window.location=this.getAttribute("href");return false}}}}function hideURLbar(){window.scrollTo(0,0.9)}iWebkit.init=function(){fullscreen();hideURLbar()};iWebkit.init()}}
+</script>
